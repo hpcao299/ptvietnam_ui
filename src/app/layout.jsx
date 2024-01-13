@@ -1,6 +1,6 @@
 import { Archivo_Narrow } from 'next/font/google';
 import './globals.css';
-import { Header } from '@/layouts';
+import { Footer, Header } from '@/layouts';
 
 const archivoNarrow = Archivo_Narrow({
     weight: ['400', '500', '600', '700'],
@@ -17,7 +17,15 @@ export default function RootLayout({ children }) {
         <html lang="vi">
             <body className={archivoNarrow.className}>
                 <Header />
-                <main style={{ marginTop: 'var(--header-height)' }}>{children}</main>
+                <main
+                    style={{
+                        marginTop: 'var(--header-height)',
+                        paddingBottom: 'var(--padding-bottom-content)',
+                    }}
+                >
+                    {children}
+                </main>
+                <Footer />
             </body>
         </html>
     );

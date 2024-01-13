@@ -1,0 +1,20 @@
+.bannerContainer {
+    padding-top: 24px;
+}
+
+.section {
+    margin-top: 84px;
+}
+
+.heading {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.subHeading {
+    font-size: 28px;
+}

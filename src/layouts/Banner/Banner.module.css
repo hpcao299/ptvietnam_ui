@@ -1,0 +1,44 @@
+.banner-wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+    overflow: hidden;
+}
+
+.banner-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-col:nth-child(1) {
+    grid-column: span 5;
+}
+
+.banner-col:nth-child(2) {
+    grid-column: span 4;
+}
+
+.banner-col:nth-child(3) {
+    grid-column: span 3;
+}
+
+.banner-row {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    height: 100%;
+}
+
+.banner-row div {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-row div img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}

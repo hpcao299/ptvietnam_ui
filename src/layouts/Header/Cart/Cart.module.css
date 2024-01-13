@@ -1,0 +1,133 @@
+.header-cart {
+    position: relative;
+    padding: 2px 0;
+    color: #000;
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.header-cart-count {
+    font-size: 12px;
+    font-weight: 500;
+
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+
+    text-align: center;
+}
+
+.cart-popup {
+    position: absolute;
+    top: calc(100% + 16px);
+    right: -8px;
+
+    width: var(--cart-popup-width);
+    padding: 10px;
+    background-color: #fff;
+
+    box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    z-index: 10;
+
+    opacity: 0;
+    transition: opacity 0.24s ease;
+    visibility: hidden;
+}
+
+.header-cart:hover .cart-popup {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cart-popup::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 8px;
+    transform: translateY(calc(-100% + 2px));
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 12px solid #fff;
+}
+
+.cart-popup::before {
+    content: '';
+    position: absolute;
+    top: -22px;
+    right: 0;
+    width: 50px;
+    height: 24px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding-right: 28px;
+    position: relative;
+}
+
+.cart-item-img {
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+
+.cart-item-details {
+    margin-left: 12px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.cart-item-title {
+    text-transform: uppercase;
+}
+
+.cart-item-quantity {
+    color: var(--secondary-text-color);
+    margin-right: 8px;
+}
+
+.cart-item-price {
+    font-size: 20px;
+}
+
+.cart-item-delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--dark-text-color);
+    padding: 2px;
+}
+
+.cart-item-delete:hover {
+    color: #000;
+}
+
+.cart-total {
+    font-size: 16px;
+    text-align: center;
+
+    border-top: 1px solid var(--light-border-color);
+    border-bottom: 1px solid var(--light-border-color);
+
+    padding: 8px 0;
+    margin: 10px 0;
+}
+
+.cart-total-price {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.show-cart-btn {
+    width: 100%;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-size: 14px;
+}

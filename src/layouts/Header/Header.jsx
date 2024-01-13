@@ -1,16 +1,24 @@
+import config from '@/config';
 import classNames from 'classnames/bind';
-import React from 'react';
-import styles from './Header.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import config from '@/config';
-import { ShoppingCart, Search } from 'react-feather';
+import { Search } from 'react-feather';
+import Cart from './Cart';
+import styles from './Header.module.css';
 
 const cx = classNames.bind(styles);
 
 const Header = () => {
+    const categoryLinks = [
+        { title: 'áo', slug: 'ao' },
+        { title: 'áo khoác', slug: 'ao-khoac' },
+        { title: 'túi', slug: 'tui' },
+        { title: 'nón', slug: 'non' },
+        { title: 'phụ kiện', slug: 'phu-kien' },
+    ];
+
     return (
-        <div className={cx('header')}>
+        <header className={cx('header')}>
             <div className={cx('header-content')}>
                 <Link href={config.routes.home}>
                     <Image
@@ -22,24 +30,11 @@ const Header = () => {
                     />
                 </Link>
                 <div className={cx('header-links-wrapper')}>
-                    <Link href="/" className={cx('header-link')}>
-                        áo
-                    </Link>
-                    <Link href="/" className={cx('header-link')}>
-                        áo khoác
-                    </Link>
-                    <Link href="/" className={cx('header-link')}>
-                        túi
-                    </Link>
-                    <Link href="/" className={cx('header-link')}>
-                        nón
-                    </Link>
-                    <Link href="/" className={cx('header-link')}>
-                        tem
-                    </Link>
-                    <Link href="/" className={cx('header-link')}>
-                        phụ kiện
-                    </Link>
+                    {categoryLinks.map(({ title, slug }, i) => (
+                        <Link href={`/category/${slug}`} key={i} className={cx('header-link')}>
+                            {title}
+                        </Link>
+                    ))}
                 </div>
                 <div className="d-flex al-center">
                     <form className={cx('header-search-wrapper')}>
@@ -53,15 +48,10 @@ const Header = () => {
                             <Search size={20} />
                         </button>
                     </form>
-                    <Link href={config.routes.cart}>
-                        <div className={cx('header-cart')}>
-                            <ShoppingCart size={26} />
-                            <div className={cx('header-cart-count')}>0</div>
-                        </div>
-                    </Link>
+                    <Cart />
                 </div>
             </div>
-        </div>
+        </header>
     );
 };
 
