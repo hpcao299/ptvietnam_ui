@@ -1,0 +1,83 @@
+.item > div {
+    padding: 28px 0;
+}
+
+.item:not(:first-child) {
+    border-top: 1px solid #eee;
+}
+
+.itemProduct {
+    display: flex;
+}
+
+.itemProduct img {
+    width: 150px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.itemDetails {
+    font-size: 16px;
+}
+
+.itemDetails h4 {
+    text-transform: uppercase;
+}
+
+.itemPrice {
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.itemQuantity {
+    display: flex;
+    align-items: center;
+}
+
+.itemQuantity button {
+    background-color: transparent;
+    outline: none;
+    width: 40px;
+    font-size: 16px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.decreaseBtn {
+    border-radius: 50px 0 0 50px;
+    border: 1px solid #eee;
+}
+
+.displayQuantity {
+    font-size: 16px;
+    border: none;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    width: 35px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.increaseBtn {
+    border-radius: 0 50px 50px 0;
+    border: 1px solid #eee;
+}
+
+.itemTotal {
+    vertical-align: middle;
+    text-align: left;
+    font-size: 18px;
+}
+
+.itemDelete button {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    padding: 4px;
+}
+
+.itemDelete svg {
+    width: 18px;
+    height: 18px;
+}

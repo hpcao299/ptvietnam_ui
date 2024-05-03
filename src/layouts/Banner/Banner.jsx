@@ -9,7 +9,13 @@ const Banner = () => {
     return (
         <div className={cx('banner-wrapper')}>
             <div className={cx('banner-col')}>
-                <Image src="/banner1.jpeg" alt="Banner image" width={489} height={326} />
+                <Image
+                    src="/banner1.jpeg"
+                    alt="Banner image"
+                    width={489}
+                    height={326}
+                    draggable={false}
+                />
             </div>
             <div className={cx('banner-col')}>
                 <div className={cx('banner-row')}>
@@ -20,6 +26,7 @@ const Banner = () => {
                             width={390}
                             height={152}
                             style={{ objectPosition: '0 -6px' }}
+                            draggable={false}
                         />
                     </div>
                     <div>
@@ -29,12 +36,19 @@ const Banner = () => {
                             width={390}
                             height={152}
                             style={{ objectPosition: '0 -80px' }}
+                            draggable={false}
                         />
                     </div>
                 </div>
             </div>
             <div className={cx('banner-col')}>
-                <Image src="/banner4.jpeg" alt="Banner image" width={287} height={326} />
+                <Image
+                    src="/banner4.jpeg"
+                    alt="Banner image"
+                    width={287}
+                    height={326}
+                    draggable={false}
+                />
             </div>
         </div>
     );
