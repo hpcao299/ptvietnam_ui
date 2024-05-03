@@ -1,33 +1,21 @@
 import config from '@/config';
+import { categoryLinks } from '@/constants';
 import classNames from 'classnames/bind';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Search } from 'react-feather';
 import Cart from './Cart';
 import styles from './Header.module.css';
+import blackLogo from '~/public/black_logo.png';
 
 const cx = classNames.bind(styles);
 
 const Header = () => {
-    const categoryLinks = [
-        { title: 'áo', slug: 'ao' },
-        { title: 'áo khoác', slug: 'ao-khoac' },
-        { title: 'túi', slug: 'tui' },
-        { title: 'nón', slug: 'non' },
-        { title: 'phụ kiện', slug: 'phu-kien' },
-    ];
-
     return (
         <header className={cx('header')}>
             <div className={cx('header-content')}>
                 <Link href={config.routes.home}>
-                    <Image
-                        src="/black_logo.png"
-                        alt="PT Vietnam Logo"
-                        height={60}
-                        width={115}
-                        className={cx('header-logo')}
-                    />
+                    <Image src={blackLogo} alt="PT Vietnam Logo" className={cx('header-logo')} />
                 </Link>
                 <div className={cx('header-links-wrapper')}>
                     {categoryLinks.map(({ title, slug }, i) => (

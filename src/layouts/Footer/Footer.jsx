@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Footer.module.css';
 import Image from 'next/image';
 import { Smartphone, Mail } from 'react-feather';
+import whiteLogo from '~/public/white_logo.png';
 
 const Footer = () => {
     const serviceLinks = [
@@ -21,8 +22,8 @@ const Footer = () => {
                 <div className={styles.content}>
                     <div className={styles.col}>
                         <Image
-                            src="/white_logo.png"
-                            alt="White logo"
+                            src={whiteLogo}
+                            alt="PT Vietnam Logo"
                             width={186}
                             height={92}
                             className={styles.logo}

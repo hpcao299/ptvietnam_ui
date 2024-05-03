@@ -22,7 +22,7 @@ const Cart = () => {
                             <Image
                                 src="/product_1.jpeg"
                                 alt="Product image"
-                                layout="fill"
+                                fill
                                 objectFit="contain"
                             />
                         </div>

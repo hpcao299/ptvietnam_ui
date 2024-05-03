@@ -12,19 +12,14 @@ const ProductPage = () => {
             <div className="d-flex">
                 <div className={cx('productImageContainer')}>
                     <div className={cx('productImage')}>
-                        <Image
-                            src="/product_4.jpeg"
-                            alt="Product image"
-                            layout="fill"
-                            objectFit="contain"
-                        />
+                        <Image src="/product_4.jpeg" alt="Product image" fill objectFit="contain" />
                     </div>
                     <div className={cx('productImageSlideshow')}>
                         <div className={cx('productImageSlide')}>
                             <Image
                                 src="/product_4.jpeg"
                                 alt="Product image"
-                                layout="fill"
+                                fill
                                 objectFit="contain"
                             />
                         </div>
@@ -32,7 +27,7 @@ const ProductPage = () => {
                             <Image
                                 src="/product_2.jpeg"
                                 alt="Product image"
-                                layout="fill"
+                                fill
                                 objectFit="contain"
                             />
                         </div>
@@ -40,7 +35,7 @@ const ProductPage = () => {
                             <Image
                                 src="/product_1.jpeg"
                                 alt="Product image"
-                                layout="fill"
+                                fill
                                 objectFit="contain"
                             />
                         </div>
@@ -48,7 +43,7 @@ const ProductPage = () => {
                             <Image
                                 src="/product_5.jpeg"
                                 alt="Product image"
-                                layout="fill"
+                                fill
                                 objectFit="contain"
                             />
                         </div>
@@ -56,7 +51,7 @@ const ProductPage = () => {
                             <Image
                                 src="/product_6.jpeg"
                                 alt="Product image"
-                                layout="fill"
+                                fill
                                 objectFit="contain"
                             />
                         </div>
